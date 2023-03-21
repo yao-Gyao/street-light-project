@@ -60,10 +60,34 @@
             android:padding="10dp"
             android:text="密码"
             android:textColor="#000"
-            android:textSize="20sp"></TextView>
+            android:textSize="20sp"/>
 
         <EditText
             android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberPassword"
+            android:layout_marginLeft="5dp"
+            android:padding="10dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="确认密码"
+            android:textColor="#000"
+            android:textSize="20sp"></TextView>
+
+        <EditText
+            android:id="@+id/et_password_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -73,20 +97,10 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/btn_Login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
-        android:background="#1499F3"
-        android:text="登录"
-        android:textColor="@android:color/white"
-        android:textSize="20sp" />
-
-    <Button
         android:id="@+id/btn_Resgiter"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="55dp"
         android:background="#1499F3"
         android:text="注册"
         android:textColor="@android:color/white"
