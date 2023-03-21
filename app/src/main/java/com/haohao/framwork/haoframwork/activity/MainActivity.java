@@ -127,10 +127,6 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        vp_main.setCurrentItem(4);
-        View customView = tab_main.getTabAt(4).getCustomView();
-        TextView tabTitle = customView.findViewById(R.id.tv_tab);
-        tabTitle.setTextColor(getResources().getColor(R.color.tab_select));
     }
 
     private View setTabView(String title,Integer res){
