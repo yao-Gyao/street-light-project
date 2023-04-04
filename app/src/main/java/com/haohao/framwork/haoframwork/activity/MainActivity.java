@@ -83,6 +83,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initView() {
+        setStatusBarFixWindow(true);
         vp_main = (ViewPager) findViewById(R.id.vp_main);
         tab_main = (TabLayout) findViewById(R.id.tab_main);
         initTabLayout();

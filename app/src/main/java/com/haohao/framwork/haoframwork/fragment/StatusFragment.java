@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.haohao.framwork.haoframwork.R;
 import com.haohao.framwork.haoframwork.framwork.BaseFragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 
 /**
@@ -40,6 +43,11 @@ import androidx.annotation.Nullable;
 
 public class StatusFragment extends BaseFragment {
 
+    private EditText et_search;
+    private TextView tv_search;
+    private RecyclerView rv;
+    private TextView tv_title;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -50,7 +58,12 @@ public class StatusFragment extends BaseFragment {
 
 
     private void initView(View view) {
+        et_search = view.findViewById(R.id.et_search);
+        tv_search = view.findViewById(R.id.tv_search);
+        rv = view.findViewById(R.id.rv);
+        tv_title = view.findViewById(R.id.tv_title);
 
+        tv_title.setText("路灯状态");
     }
 
 }

@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 
+import com.blankj.utilcode.util.Utils;
+
 import java.util.ArrayList;
 
 import androidx.multidex.MultiDex;
@@ -28,6 +30,12 @@ public class BaseApplication extends Application {
             mAppUtil = new BaseApplication();
         }
         return mAppUtil;
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        Utils.init(this);
     }
 
     /**

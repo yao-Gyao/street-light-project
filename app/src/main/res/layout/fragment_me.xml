@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#F8C5D6"
+        >
+
+        <org.raphets.roundimageview.RoundImageView
+            android:id="@+id/iv_me_header"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginBottom="28dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/img"
+            app:type="oval" />
+
+        <TextView
+            android:id="@+id/tv_me_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_me_header"
+            android:layout_toRightOf="@id/iv_me_header"
+            android:layout_marginLeft="15dp"
+            android:text="请登录"
+            android:textColor="#ff111111"
+            android:textSize="17sp"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <FrameLayout
+            android:id="@+id/fl_update_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="49dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="26dp"
+                android:src="@mipmap/ic_me_three"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="66dp"
+                android:text="修改密码"
+                android:textColor="#ff111111"
+                android:textSize="18sp"
+                />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="退出登录" />
 </LinearLayout>
