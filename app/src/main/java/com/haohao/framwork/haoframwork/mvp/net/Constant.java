@@ -1,6 +1,5 @@
 package com.haohao.framwork.haoframwork.mvp.net;
 
-import com.haohao.framwork.haoframwork.BuildConfig;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -33,15 +32,11 @@ public class Constant {
     /**
      * 服务器地址(基类地址)
      */
-    public static final String SERVER_URL = BuildConfig.SERVER_HOST;
+    public static final String SERVER_URL = "http://43.142.147.160:8085/";
 
-    /**
-     * 接口请求地址
-     */
+
     public static class UrlOrigin {
-        /**
-         * 获取快递信息
-         */
-        public static final String get_express_info = "query";
+
+        public static final String get_list = "list";
     }
 }

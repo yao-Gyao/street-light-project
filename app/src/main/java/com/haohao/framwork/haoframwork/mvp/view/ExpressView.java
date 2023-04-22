@@ -1,6 +1,6 @@
 package com.haohao.framwork.haoframwork.mvp.view;
 
-import com.haohao.framwork.haoframwork.mvp.bean.ExpressInfo;
+import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -32,8 +32,8 @@ public interface ExpressView extends BaseView{
     /**
      * 更新UI
      *
-     * @param expressInfo 快递信息
+     * @param mainListBean 快递信息
      */
-    void updateView(ExpressInfo expressInfo);
+    void updateView(MainListBean mainListBean);
 
 }

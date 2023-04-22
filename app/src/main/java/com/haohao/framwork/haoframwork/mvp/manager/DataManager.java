@@ -1,13 +1,12 @@
 package com.haohao.framwork.haoframwork.mvp.manager;
 
-import com.haohao.framwork.haoframwork.mvp.bean.ExpressInfo;
+import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
 import com.haohao.framwork.haoframwork.mvp.net.RetrofitHelper;
 import com.haohao.framwork.haoframwork.mvp.net.RetrofitService;
 
 import java.util.Map;
 
 import io.reactivex.Observable;
-import okhttp3.RequestBody;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -55,21 +54,10 @@ public class DataManager {
     /************下边开始进行网络请求,在各自的presenter中调用各自的下边的网络请求的方法,在presenter中拿到Observable<javabean>*****************/
 
 
-    /**
-     * 获取快递信息 -键值对方式
-     * @return Observable<ExpressInfo>
-     */
-    public Observable<ExpressInfo> getExpressInfo(Map<String,String> map) {
-        return retrofitService.getExpressInfoRx(map);
+
+    public Observable<MainListBean> getList() {
+        return retrofitService.getList();
     }
 
-    /**
-     * 传参以 json方式
-     * @param body
-     * @return
-     */
-    public Observable<ExpressInfo> getExpressInfo(RequestBody body) {
-        return retrofitService.getExpressInfoRx(body);
-    }
 
 }

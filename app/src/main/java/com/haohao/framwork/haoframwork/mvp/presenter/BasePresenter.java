@@ -39,7 +39,7 @@ public class BasePresenter {
 
     /**
      * 在presenter都要执行 DataManager.compose(getProvider()
-     *      .<ExpressInfo>bindUntilEvent(ActivityEvent.DESTROY))
+     *      .<MainListBean>bindUntilEvent(ActivityEvent.DESTROY))
      *      表示在activity销毁的时候,取消订阅,防止内存泄漏
      *
      * @return

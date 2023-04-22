@@ -1,16 +1,12 @@
 package com.haohao.framwork.haoframwork.mvp.net;
 
 
-import com.haohao.framwork.haoframwork.mvp.bean.ExpressInfo;
+import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
 
 import java.util.Map;
 
 import io.reactivex.Observable;
-import okhttp3.RequestBody;
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
-import retrofit2.http.POST;
 import retrofit2.http.QueryMap;
 
 /**
@@ -44,17 +40,9 @@ public interface RetrofitService {
     /**
      * 获取快递信息-键值对方式
      * Rx方式
-     * @return Observable<ExpressInfo>
+     * @return Observable<MainListBean>
      */
-    @GET(Constant.UrlOrigin.get_express_info)
-    Observable<ExpressInfo> getExpressInfoRx(@QueryMap Map<String, String> map);
+    @GET(Constant.UrlOrigin.get_list)
+    Observable<MainListBean> getList();
 
-    /**
-     * 另外一种方式，json方式放到请求体里
-     * @param body
-     * @return
-     */
-    @Headers({"Content-Type: application/json", "Accept:application/json"})
-    @POST(Constant.UrlOrigin.get_express_info)
-    Observable<ExpressInfo> getExpressInfoRx(@Body RequestBody body);
 }

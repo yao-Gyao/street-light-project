@@ -48,7 +48,7 @@ import androidx.viewpager.widget.ViewPager;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author hao
- * @date 2017/10/30
+ * @date
  * @description
  */
 
@@ -79,6 +79,8 @@ public class MainActivity extends BaseActivity {
                 .addPermission(Manifest.permission.READ_CONTACTS)
                 .addPermission(Manifest.permission.WRITE_CONTACTS)
                 .addPermission(Manifest.permission.RECORD_AUDIO)
+                .addPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+                .addPermission(Manifest.permission.ACCESS_FINE_LOCATION)
                 .initPermission();
     }
 

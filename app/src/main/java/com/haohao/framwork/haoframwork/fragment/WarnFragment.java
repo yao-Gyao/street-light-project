@@ -1,6 +1,5 @@
 package com.haohao.framwork.haoframwork.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.haohao.framwork.haoframwork.R;
-import com.haohao.framwork.haoframwork.activity.MapActivity;
 import com.haohao.framwork.haoframwork.framwork.BaseFragment;
 
 import androidx.annotation.NonNull;
@@ -67,8 +65,7 @@ public class WarnFragment extends BaseFragment {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), MapActivity.class));
-            }
+             }
         });
     }
 
