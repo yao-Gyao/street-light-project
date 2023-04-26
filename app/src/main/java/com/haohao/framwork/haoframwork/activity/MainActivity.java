@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.material.tabs.TabLayout;
 import com.haohao.framwork.haoframwork.R;
 import com.haohao.framwork.haoframwork.application.BaseApplication;
+import com.haohao.framwork.haoframwork.fragment.DataFragment;
 import com.haohao.framwork.haoframwork.fragment.MeFragment;
 import com.haohao.framwork.haoframwork.fragment.StatusFragment;
 import com.haohao.framwork.haoframwork.fragment.UpdateFragment;
@@ -85,7 +86,7 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initView() {
-        setStatusBarFixWindow(true);
+        setStatusBar(true);
         vp_main = (ViewPager) findViewById(R.id.vp_main);
         tab_main = (TabLayout) findViewById(R.id.tab_main);
         initTabLayout();
@@ -93,9 +94,10 @@ public class MainActivity extends BaseActivity {
 
     private void initTabLayout() {
         mFragments = new ArrayList<>();
-        mFragments.add(new StatusFragment());
         mFragments.add(new WarnFragment());
+        mFragments.add(new StatusFragment());
         mFragments.add(new UpdateFragment());
+        mFragments.add(new DataFragment());
         mFragments.add(new MeFragment());
         TabViewPagerAdapter adapter = new TabViewPagerAdapter(getSupportFragmentManager(), mFragments);
         vp_main.setAdapter(adapter);
@@ -103,7 +105,8 @@ public class MainActivity extends BaseActivity {
         tab_main.getTabAt(0).setCustomView(setTabView(getResources().getString(R.string.tab_one),R.drawable.tab_one));
         tab_main.getTabAt(1).setCustomView(setTabView(getResources().getString(R.string.tab_two),R.drawable.tab_two));
         tab_main.getTabAt(2).setCustomView(setTabView(getResources().getString(R.string.tab_three),R.drawable.tab_three));
-        tab_main.getTabAt(3).setCustomView(setTabView(getResources().getString(R.string.tab_four),R.drawable.tab_five));
+        tab_main.getTabAt(3).setCustomView(setTabView(getResources().getString(R.string.tab_five),R.drawable.tab_five));
+        tab_main.getTabAt(4).setCustomView(setTabView(getResources().getString(R.string.tab_four),R.drawable.tab_five));
 
         tab_main.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

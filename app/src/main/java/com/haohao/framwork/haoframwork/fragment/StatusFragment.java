@@ -23,6 +23,7 @@ import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
+import com.baidu.mapapi.search.route.RoutePlanSearch;
 import com.haohao.framwork.haoframwork.R;
 import com.haohao.framwork.haoframwork.framwork.BaseFragment;
 import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
@@ -64,7 +65,6 @@ import java.util.List;
 
 public class StatusFragment extends BaseFragment implements ExpressView {
 
-    private TextView tv_title;
     private MainPresenter mPresenter;
     private MapView mMapView;
     private LocationClient mLocClient;
@@ -88,9 +88,7 @@ public class StatusFragment extends BaseFragment implements ExpressView {
     }
 
     private void initView(View view) {
-        tv_title = view.findViewById(R.id.tv_title);
         mMapView = view.findViewById(R.id.mapview);
-        tv_title.setText("路灯状态");
         mMapView.showScaleControl(true);  // 设置比例尺是否可见（true 可见/false不可见）
         //mMapView.showZoomControls(false);  // 设置缩放控件是否可见（true 可见/false不可见）
         mMapView.removeViewAt(1);// 删除百度地图Logo
@@ -172,7 +170,6 @@ public class StatusFragment extends BaseFragment implements ExpressView {
             MapStatus.Builder builder = new MapStatus.Builder();
             builder.target(latLng).zoom(20.0f);
             mBaiduMap.animateMapStatus(MapStatusUpdateFactory.newMapStatus(builder.build()));
-
         }
 
     }

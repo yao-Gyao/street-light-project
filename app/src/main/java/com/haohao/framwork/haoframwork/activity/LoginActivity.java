@@ -9,12 +9,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.haohao.framwork.haoframwork.R;
 import com.haohao.framwork.haoframwork.application.BaseApplication;
+import com.haohao.framwork.haoframwork.database.StrokeDataBase;
+import com.haohao.framwork.haoframwork.database.UserBean;
 import com.haohao.framwork.haoframwork.framwork.BaseActivity;
 import com.haohao.framwork.haoframwork.utils.HttpInterceptorUtil;
 
 import java.util.ArrayList;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
+import io.reactivex.subscribers.DefaultSubscriber;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -91,7 +98,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 submit();
                 break;
             case R.id.btn_Resgiter:
-                startActivity(new Intent(this,RegisterActivity.class));
+                startActivity(new Intent(this, RegisterActivity.class));
                 break;
         }
     }
@@ -113,9 +120,34 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             Toast.makeText(this, "请输入8位数字密码", Toast.LENGTH_SHORT).show();
             return;
         }
+        StrokeDataBase.getInstance(LoginActivity.this).getUserDao().getPwd(account)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new DefaultSubscriber<UserBean>() {
+                    @Override
+                    public void onNext(UserBean users) {
+                        if (users == null) {
+                            ToastUtils.showShort("没有此用户");
+                        } else {
+                            if (password.equals(users.getLogin_pwd())) {
+                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                finish();
+                            } else {
+                                ToastUtils.showShort("密码错误");
+                            }
+                        }
+                    }
 
-        // TODO: 2023/3/21 登录网络请求
-        startActivity(new Intent(this,MainActivity.class));
+                    @Override
+                    public void onError(Throwable t) {
 
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        ToastUtils.showShort("没有此用户");
+                    }
+                });
     }
+
 }

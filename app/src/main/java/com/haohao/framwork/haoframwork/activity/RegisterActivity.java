@@ -7,7 +7,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.blankj.utilcode.util.ToastUtils;
 import com.haohao.framwork.haoframwork.R;
+import com.haohao.framwork.haoframwork.database.StrokeDataBase;
+import com.haohao.framwork.haoframwork.database.UserBean;
 import com.haohao.framwork.haoframwork.framwork.BaseActivity;
 
 public class RegisterActivity extends BaseActivity implements View.OnClickListener {
@@ -37,7 +40,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_Resgiter:
-
+                submit();
                 break;
         }
     }
@@ -71,7 +74,14 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
             return;
         }
 
-        // TODO: 2023/3/21 注册网络请求
+        UserBean bean = new UserBean();
+        bean.setName(account);
+        bean.setLogin_name(account);
+        bean.setLogin_pwd(password);
+        bean.setHeader("");
+        StrokeDataBase.getInstance(RegisterActivity.this).getUserDao().insert(bean);
+        ToastUtils.showShort("注册成功");
+        finish();
 
     }
 }

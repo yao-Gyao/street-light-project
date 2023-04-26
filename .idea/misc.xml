@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/banner_item.xml" value="0.22826086956521738" />
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/fragment_data.xml" value="0.22826086956521738" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/fragment_status.xml" value="0.22826086956521738" />
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/fragment_update.xml" value="0.22826086956521738" />
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/fragment_warn.xml" value="0.24947916666666667" />
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/item_share.xml" value="0.22826086956521738" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/title_bar.xml" value="0.22826086956521738" />
       </map>
     </option>

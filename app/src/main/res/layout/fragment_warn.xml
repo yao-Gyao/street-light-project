@@ -2,21 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <include layout="@layout/status_bar_layout"/>
-    <include layout="@layout/title_bar"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <org.raphets.roundimageview.RoundImageView
+            android:id="@+id/iv_main"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:leftBottom_corner_radius="44dp"
+            app:leftTop_corner_radius="0dp"
+            app:rightBottom_corner_radius="44dp"
+            app:rightTop_corner_radius="0dp"
+            app:type="round" />
+
+        <net.center.blurview.ShapeBlurView
+            android:id="@+id/blurview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:blur_border_color="#00ffffff"
+            app:blur_border_width="0.1dp"
+            app:blur_corner_radius_bottom_left="44dp"
+            app:blur_corner_radius_bottom_right="44dp"
+            app:blur_mode="rectangle"
+            app:blur_radius="10dp" />
+
+        <com.zhouwei.mzbanner.MZBannerView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="108dp"
+            android:layout_marginRight="20dp"
+            app:canLoop="true"
+            app:open_mz_mode="false" />
+
+    </FrameLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="跳转gis图层"
-        />
 </LinearLayout>

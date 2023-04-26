@@ -40,17 +40,18 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning,HardcodedDebugMode"
         tools:replace="android:allowBackup">
-        <activity android:name=".activity.RegisterActivity" />
-        <activity android:name=".activity.LoginActivity">
-
-        </activity>
-        <activity android:name=".activity.OpenGlActivity" />
 
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
 
+        <activity android:name=".activity.OpenGlActivity" />
+
         <activity android:name=".activity.MainActivity">
+        </activity>
+
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
