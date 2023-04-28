@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.fragment.app.Fragment;
+
 import com.google.android.material.tabs.TabLayout;
 import com.haohao.framwork.haoframwork.R;
 import com.haohao.framwork.haoframwork.application.BaseApplication;
@@ -19,13 +21,11 @@ import com.haohao.framwork.haoframwork.fragment.UpdateFragment;
 import com.haohao.framwork.haoframwork.fragment.WarnFragment;
 import com.haohao.framwork.haoframwork.framwork.BaseActivity;
 import com.haohao.framwork.haoframwork.framwork.TabViewPagerAdapter;
+import com.haohao.framwork.haoframwork.view.ControlScrollViewPager;
 import com.vondear.rxtool.RxPermissionsTool;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -55,7 +55,7 @@ import androidx.viewpager.widget.ViewPager;
 
 public class MainActivity extends BaseActivity {
 
-    private ViewPager vp_main;
+    private ControlScrollViewPager vp_main;
     private TabLayout tab_main;
     private List<Fragment> mFragments;
     private long exitTime;
@@ -87,7 +87,7 @@ public class MainActivity extends BaseActivity {
 
     private void initView() {
         setStatusBar(true);
-        vp_main = (ViewPager) findViewById(R.id.vp_main);
+        vp_main = (ControlScrollViewPager) findViewById(R.id.vp_main);
         tab_main = (TabLayout) findViewById(R.id.tab_main);
         initTabLayout();
     }
@@ -105,7 +105,7 @@ public class MainActivity extends BaseActivity {
         tab_main.getTabAt(0).setCustomView(setTabView(getResources().getString(R.string.tab_one),R.drawable.tab_one));
         tab_main.getTabAt(1).setCustomView(setTabView(getResources().getString(R.string.tab_two),R.drawable.tab_two));
         tab_main.getTabAt(2).setCustomView(setTabView(getResources().getString(R.string.tab_three),R.drawable.tab_three));
-        tab_main.getTabAt(3).setCustomView(setTabView(getResources().getString(R.string.tab_five),R.drawable.tab_five));
+        tab_main.getTabAt(3).setCustomView(setTabView(getResources().getString(R.string.tab_five),R.drawable.tab_four));
         tab_main.getTabAt(4).setCustomView(setTabView(getResources().getString(R.string.tab_four),R.drawable.tab_five));
 
         tab_main.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {

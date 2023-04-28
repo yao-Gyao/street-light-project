@@ -8,6 +8,7 @@ import com.baidu.location.LocationClient;
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
 import com.blankj.utilcode.util.Utils;
+import com.haohao.framwork.haoframwork.database.UserBean;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,7 @@ import androidx.multidex.MultiDex;
 public class BaseApplication extends Application {
     private static ArrayList<Activity> activityStack;
     private static BaseApplication mAppUtil;
+    public static UserBean mUser;
 
     /**
      * 单例

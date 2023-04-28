@@ -17,13 +17,13 @@ public class LightAdapter extends BaseQuickAdapter<MainListBean.DataBean, BaseVi
 
     @Override
     protected void convert(BaseViewHolder helper, MainListBean.DataBean item) {
-        helper.setText(R.id.tv1, "id: " + item.getData_id())
+        helper.setText(R.id.tv1, "设备id: " + item.getData_id())
                 .setText(R.id.tv2, "位置: " + item.getLocation())
-                .setText(R.id.tv3, "temp: " + item.getTemp())
-                .setText(R.id.tv4, "rh: " + item.getRh())
-                .setText(R.id.tv5, "lx: " + item.getLx())
-                .setText(R.id.tv6, "vol: " + item.getVol())
-                .setText(R.id.tv7, "cur: " + item.getCur())
-                .setText(R.id.tv8, "time: " + item.getTime());
+                .setText(R.id.tv3, "环境温度: " + item.getTemp())
+                .setText(R.id.tv4, "湿度: " + item.getRh())
+                .setText(R.id.tv5, "光强: " + item.getLx())
+                .setText(R.id.tv6, "电压: " + item.getVol())
+                .setText(R.id.tv7, "电流: " + item.getCur())
+                .setText(R.id.tv8, "当前时间: " + item.getTime());
     }
 }

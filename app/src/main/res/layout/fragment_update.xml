@@ -2,42 +2,41 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_clock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="定时"
-        />
-
-    <Button
-        android:id="@+id/btn_light"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <TextView
+        android:id="@+id/tv_light"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
         android:layout_marginTop="10dp"
+        android:textSize="20sp"
         android:text="亮度调节"
         />
 
-    <LinearLayout
+    <com.haohao.framwork.haoframwork.view.HorizontalScaleScrollView
+        android:id="@+id/horizontalScale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="一键开启关闭"
-            />
+        />
 
-        <com.haohao.framwork.haoframwork.view.SmoothCheckBox
-            android:id="@+id/checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            />
-    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:text="一键开启关闭"
+        />
+    <com.haohao.framwork.haoframwork.view.SwitchButton
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:sb_show_indicator="false"
+        app:sb_checked_color="#eb6b51"
+        />
 </LinearLayout>

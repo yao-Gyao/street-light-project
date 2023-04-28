@@ -130,6 +130,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                             ToastUtils.showShort("没有此用户");
                         } else {
                             if (password.equals(users.getLogin_pwd())) {
+                                BaseApplication.mUser = users;
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                 finish();
                             } else {
