@@ -5,11 +5,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.haohao.framwork.haoframwork.R;
 import com.haohao.framwork.haoframwork.adapter.LightAdapter;
 import com.haohao.framwork.haoframwork.framwork.BaseFragment;
@@ -20,16 +17,16 @@ import com.zhouwei.mzbanner.MZBannerView;
 import com.zhouwei.mzbanner.holder.MZHolderCreator;
 import com.zhouwei.mzbanner.holder.MZViewHolder;
 
+import org.raphets.roundimageview.RoundImageView;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
-
-import org.raphets.roundimageview.RoundImageView;
-
-import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -108,9 +105,9 @@ public class WarnFragment extends BaseFragment implements ExpressView {
 
     @Override
     public void updateView(MainListBean bean) {
-        if (bean == null || bean.getState() != 1 || bean.getData() == null)
+        if (bean == null || bean.getMap() == null|| bean.getMap().getList() == null)
             return;
-        LightAdapter adapter = new LightAdapter(R.layout.item_share,bean.getData());
+        LightAdapter adapter = new LightAdapter(R.layout.item_share,bean.getMap().getList());
         rv.setAdapter(adapter);
     }
 

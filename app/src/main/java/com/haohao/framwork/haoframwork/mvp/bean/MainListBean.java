@@ -1,6 +1,5 @@
 package com.haohao.framwork.haoframwork.mvp.bean;
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -31,134 +30,239 @@ import java.util.List;
 
 public class MainListBean extends BaseBean {
 
-
     /**
-     * msg : 200:
-     * data : [{"data_id":94,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:36"},{"data_id":93,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:35"},{"data_id":92,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:35"},{"data_id":91,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:25"},{"data_id":90,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:25"},{"data_id":89,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:24"},{"data_id":88,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:24"},{"data_id":87,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:25:24"},{"data_id":86,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:24:06"},{"data_id":85,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:24:05"},{"data_id":84,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:24:05"},{"data_id":83,"dev_ip":"/113.138.204.20","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-21 18:23:58"},{"data_id":82,"dev_ip":"/36.45.225.80","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-17 20:29:33"},{"data_id":81,"dev_ip":"/36.45.225.80","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-17 20:29:26"},{"data_id":80,"dev_ip":"/36.45.225.80","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-17 20:29:07"},{"data_id":79,"dev_ip":"/36.45.225.80","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-17 20:28:36"},{"data_id":78,"dev_ip":"/36.45.225.80","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-17 20:28:36"},{"data_id":77,"dev_ip":"/36.45.225.80","location":"109.194145,34.366802","temp":"21","rh":"51","lx":"240","vol":"11.92","cur":"12.2","time":"2023-04-17 20:28:34"}]
-     * state : 1
+     * code : null
+     * msg : null
+     * data : null
+     * map : {"count":3,"list":[{"dev_id":30,"dev_num":"LED_001","dev_ip":"36.45.242.135","location":"34.234234234,45.23423424","reg_id":18,"admin_id":35,"serve_id":35,"net_state":true,"run_state":0,"light_switch":true,"set_state":2,"light_time":"0","beep_state":false,"light_pwm":900,"create_time":"2023-05-04 15:57:08","update_time":"2023-05-04 16:25:13"},{"dev_id":28,"dev_num":"LED_2","dev_ip":"-36.45.242.135","location":"2222,2222","reg_id":18,"admin_id":35,"serve_id":35,"net_state":true,"run_state":3,"light_switch":false,"set_state":1,"light_time":"0","beep_state":false,"light_pwm":655,"create_time":"2023-05-04 00:01:46","update_time":"2023-05-04 15:28:56"},{"dev_id":27,"dev_num":"LED_1","dev_ip":"-36.45.242.135","location":"11111111,11111111","reg_id":18,"admin_id":35,"serve_id":35,"net_state":true,"run_state":3,"light_switch":false,"set_state":1,"light_time":"0","beep_state":false,"light_pwm":655,"create_time":"2023-05-03 23:55:08","update_time":"2023-05-04 15:57:50"}]}
      */
 
-    private String msg;
-    private int state;
-    private List<DataBean> data;
+    private Object code;
+    private Object msg;
+    private Object data;
+    private MapBean map;
 
-    public String getMsg() {
+    public Object getCode() {
+        return code;
+    }
+
+    public void setCode(Object code) {
+        this.code = code;
+    }
+
+    public Object getMsg() {
         return msg;
     }
 
-    public void setMsg(String msg) {
+    public void setMsg(Object msg) {
         this.msg = msg;
     }
 
-    public int getState() {
-        return state;
-    }
-
-    public void setState(int state) {
-        this.state = state;
-    }
-
-    public List<DataBean> getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(List<DataBean> data) {
+    public void setData(Object data) {
         this.data = data;
     }
 
-    public static class DataBean implements Serializable {
+    public MapBean getMap() {
+        return map;
+    }
+
+    public void setMap(MapBean map) {
+        this.map = map;
+    }
+
+    public static class MapBean {
         /**
-         * data_id : 94
-         * dev_ip : /113.138.204.20
-         * location : 109.194145,34.366802
-         * temp : 21
-         * rh : 51
-         * lx : 240
-         * vol : 11.92
-         * cur : 12.2
-         * time : 2023-04-21 18:25:36
+         * count : 3
+         * list : [{"dev_id":30,"dev_num":"LED_001","dev_ip":"36.45.242.135","location":"34.234234234,45.23423424","reg_id":18,"admin_id":35,"serve_id":35,"net_state":true,"run_state":0,"light_switch":true,"set_state":2,"light_time":"0","beep_state":false,"light_pwm":900,"create_time":"2023-05-04 15:57:08","update_time":"2023-05-04 16:25:13"},{"dev_id":28,"dev_num":"LED_2","dev_ip":"-36.45.242.135","location":"2222,2222","reg_id":18,"admin_id":35,"serve_id":35,"net_state":true,"run_state":3,"light_switch":false,"set_state":1,"light_time":"0","beep_state":false,"light_pwm":655,"create_time":"2023-05-04 00:01:46","update_time":"2023-05-04 15:28:56"},{"dev_id":27,"dev_num":"LED_1","dev_ip":"-36.45.242.135","location":"11111111,11111111","reg_id":18,"admin_id":35,"serve_id":35,"net_state":true,"run_state":3,"light_switch":false,"set_state":1,"light_time":"0","beep_state":false,"light_pwm":655,"create_time":"2023-05-03 23:55:08","update_time":"2023-05-04 15:57:50"}]
          */
 
-        private int data_id;
-        private String dev_ip;
-        private String location;
-        private String temp;
-        private String rh;
-        private String lx;
-        private String vol;
-        private String cur;
-        private String time;
+        private int count;
+        private List<ListBean> list;
 
-        public int getData_id() {
-            return data_id;
+        public int getCount() {
+            return count;
         }
 
-        public void setData_id(int data_id) {
-            this.data_id = data_id;
+        public void setCount(int count) {
+            this.count = count;
         }
 
-        public String getDev_ip() {
-            return dev_ip;
+        public List<ListBean> getList() {
+            return list;
         }
 
-        public void setDev_ip(String dev_ip) {
-            this.dev_ip = dev_ip;
+        public void setList(List<ListBean> list) {
+            this.list = list;
         }
 
-        public String getLocation() {
-            return location;
-        }
+        public static class ListBean {
+            /**
+             * dev_id : 30
+             * dev_num : LED_001
+             * dev_ip : 36.45.242.135
+             * location : 34.234234234,45.23423424
+             * reg_id : 18
+             * admin_id : 35
+             * serve_id : 35
+             * net_state : true
+             * run_state : 0
+             * light_switch : true
+             * set_state : 2
+             * light_time : 0
+             * beep_state : false
+             * light_pwm : 900
+             * create_time : 2023-05-04 15:57:08
+             * update_time : 2023-05-04 16:25:13
+             */
 
-        public void setLocation(String location) {
-            this.location = location;
-        }
+            private int dev_id;
+            private String dev_num;
+            private String dev_ip;
+            private String location;
+            private int reg_id;
+            private int admin_id;
+            private int serve_id;
+            private boolean net_state;
+            private int run_state;
+            private boolean light_switch;
+            private int set_state;
+            private String light_time;
+            private boolean beep_state;
+            private int light_pwm;
+            private String create_time;
+            private String update_time;
 
-        public String getTemp() {
-            return temp;
-        }
+            public int getDev_id() {
+                return dev_id;
+            }
 
-        public void setTemp(String temp) {
-            this.temp = temp;
-        }
+            public void setDev_id(int dev_id) {
+                this.dev_id = dev_id;
+            }
 
-        public String getRh() {
-            return rh;
-        }
+            public String getDev_num() {
+                return dev_num;
+            }
 
-        public void setRh(String rh) {
-            this.rh = rh;
-        }
+            public void setDev_num(String dev_num) {
+                this.dev_num = dev_num;
+            }
 
-        public String getLx() {
-            return lx;
-        }
+            public String getDev_ip() {
+                return dev_ip;
+            }
 
-        public void setLx(String lx) {
-            this.lx = lx;
-        }
+            public void setDev_ip(String dev_ip) {
+                this.dev_ip = dev_ip;
+            }
 
-        public String getVol() {
-            return vol;
-        }
+            public String getLocation() {
+                return location;
+            }
 
-        public void setVol(String vol) {
-            this.vol = vol;
-        }
+            public void setLocation(String location) {
+                this.location = location;
+            }
 
-        public String getCur() {
-            return cur;
-        }
+            public int getReg_id() {
+                return reg_id;
+            }
 
-        public void setCur(String cur) {
-            this.cur = cur;
-        }
+            public void setReg_id(int reg_id) {
+                this.reg_id = reg_id;
+            }
 
-        public String getTime() {
-            return time;
-        }
+            public int getAdmin_id() {
+                return admin_id;
+            }
 
-        public void setTime(String time) {
-            this.time = time;
+            public void setAdmin_id(int admin_id) {
+                this.admin_id = admin_id;
+            }
+
+            public int getServe_id() {
+                return serve_id;
+            }
+
+            public void setServe_id(int serve_id) {
+                this.serve_id = serve_id;
+            }
+
+            public boolean isNet_state() {
+                return net_state;
+            }
+
+            public void setNet_state(boolean net_state) {
+                this.net_state = net_state;
+            }
+
+            public int getRun_state() {
+                return run_state;
+            }
+
+            public void setRun_state(int run_state) {
+                this.run_state = run_state;
+            }
+
+            public boolean isLight_switch() {
+                return light_switch;
+            }
+
+            public void setLight_switch(boolean light_switch) {
+                this.light_switch = light_switch;
+            }
+
+            public int getSet_state() {
+                return set_state;
+            }
+
+            public void setSet_state(int set_state) {
+                this.set_state = set_state;
+            }
+
+            public String getLight_time() {
+                return light_time;
+            }
+
+            public void setLight_time(String light_time) {
+                this.light_time = light_time;
+            }
+
+            public boolean isBeep_state() {
+                return beep_state;
+            }
+
+            public void setBeep_state(boolean beep_state) {
+                this.beep_state = beep_state;
+            }
+
+            public int getLight_pwm() {
+                return light_pwm;
+            }
+
+            public void setLight_pwm(int light_pwm) {
+                this.light_pwm = light_pwm;
+            }
+
+            public String getCreate_time() {
+                return create_time;
+            }
+
+            public void setCreate_time(String create_time) {
+                this.create_time = create_time;
+            }
+
+            public String getUpdate_time() {
+                return update_time;
+            }
+
+            public void setUpdate_time(String update_time) {
+                this.update_time = update_time;
+            }
         }
     }
 }

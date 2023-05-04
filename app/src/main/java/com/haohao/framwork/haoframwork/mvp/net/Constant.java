@@ -37,6 +37,7 @@ public class Constant {
 
     public static class UrlOrigin {
 
-        public static final String get_list = "list";
+        public static final String get_list = "dev/getDevList";
+        public static final String get_login = "user/login";
     }
 }

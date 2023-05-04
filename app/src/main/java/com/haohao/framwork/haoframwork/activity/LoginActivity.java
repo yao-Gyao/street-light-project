@@ -120,6 +120,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
             Toast.makeText(this, "请输入8位数字密码", Toast.LENGTH_SHORT).show();
             return;
         }
+
+
         StrokeDataBase.getInstance(LoginActivity.this).getUserDao().getPwd(account)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
