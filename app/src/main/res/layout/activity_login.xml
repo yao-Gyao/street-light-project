@@ -88,7 +88,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="#1499F3"
-        android:visibility="gone"
         android:text="注册"
         android:textColor="@android:color/white"
         android:textSize="20sp" />

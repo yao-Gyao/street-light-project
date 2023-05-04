@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/drawable/dash_line_pick.xml" value="0.2085" />
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/activity_environment.xml" value="0.20478837109876016" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/activity_link_me.xml" value="0.22826086956521738" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/activity_login.xml" value="0.22826086956521738" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
@@ -13,6 +14,7 @@
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/fragment_status.xml" value="0.22826086956521738" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/fragment_update.xml" value="0.22826086956521738" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/fragment_warn.xml" value="0.24947916666666667" />
+        <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/item_env.xml" value="0.20478837109876016" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/item_share.xml" value="0.22826086956521738" />
         <entry key="..\:/TempProject/street-light-project/app/src/main/res/layout/title_bar.xml" value="0.22826086956521738" />
       </map>

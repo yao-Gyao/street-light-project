@@ -44,19 +44,57 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
+                android:text="123"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="123"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="123"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="123"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="123"
+                android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="20dp"
                 android:text="123"
                 android:textSize="15sp" />
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical|right"
-            android:layout_marginRight="20dp"
-            android:text="环境数据"
-            />
     </FrameLayout>
 </androidx.cardview.widget.CardView>

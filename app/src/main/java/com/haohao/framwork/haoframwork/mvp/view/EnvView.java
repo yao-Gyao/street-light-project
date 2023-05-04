@@ -1,5 +1,6 @@
-package com.haohao.framwork.haoframwork.mvp.net;
+package com.haohao.framwork.haoframwork.mvp.view;
 
+import com.haohao.framwork.haoframwork.mvp.bean.EnvBean;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -23,22 +24,12 @@ package com.haohao.framwork.haoframwork.mvp.net;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author hao
- * @date 2017/10/30
- * @description 请求地址
+ * @date
+ * @description
  */
 
-public class Constant {
+public interface EnvView extends BaseView{
 
-    /**
-     * 服务器地址(基类地址)
-     */
-    public static final String SERVER_URL = "http://43.142.147.160:8085/";
+    void updateView(EnvBean mainListBean);
 
-
-    public static class UrlOrigin {
-
-        public static final String get_list = "dev/getDevList";
-        public static final String get_login = "user/login";
-        public static final String get_env= "data/getDataById";
-    }
 }

@@ -1,13 +1,12 @@
 package com.haohao.framwork.haoframwork.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
@@ -20,21 +19,13 @@ import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.Marker;
-import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.model.LatLng;
-import com.baidu.mapapi.search.route.RoutePlanSearch;
 import com.haohao.framwork.haoframwork.R;
 import com.haohao.framwork.haoframwork.framwork.BaseFragment;
 import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
 import com.haohao.framwork.haoframwork.mvp.presenter.MainPresenter;
 import com.haohao.framwork.haoframwork.mvp.view.ExpressView;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.List;
 
 
 /**
@@ -98,7 +89,7 @@ public class StatusFragment extends BaseFragment implements ExpressView {
         mBaiduMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
             @Override
             public boolean onMarkerClick(Marker marker) {
-                MainListBean.DataBean bean = (MainListBean.DataBean) marker.getExtraInfo().get("bean");
+//                MainListBean.DataBean bean = (MainListBean.DataBean) marker.getExtraInfo().get("bean");
                 return true;
 
             }
@@ -216,23 +207,23 @@ public class StatusFragment extends BaseFragment implements ExpressView {
 
     @Override
     public void updateView(MainListBean bean) {
-        if (bean == null || bean.getState() != 1 || bean.getData() == null)
-            return;
-        List<MainListBean.DataBean> data = bean.getData();
-        for(MainListBean.DataBean d : data){
-            //绘制路灯
-            String[] split = d.getLocation().split(",");
-            LatLng point = new LatLng(Double.parseDouble(split[1]), Double.parseDouble(split[0]));
-            // 构建MarkerOption，用于在地图上添加Marker
-            MarkerOptions options = new MarkerOptions().position(point)
-                    .icon(bitmap);
-            // 在地图上添加Marker，并显示
-            Marker marker = (Marker) mBaiduMap.addOverlay(options);
-            if (marker != null){
-                Bundle bundle = new Bundle();
-                bundle.putSerializable("bean", d);
-                marker.setExtraInfo(bundle);
-            }
-        }
+//        if (bean == null || bean.getState() != 1 || bean.getData() == null)
+//            return;
+//        List<MainListBean.DataBean> data = bean.getData();
+//        for(MainListBean.DataBean d : data){
+//            //绘制路灯
+//            String[] split = d.getLocation().split(",");
+//            LatLng point = new LatLng(Double.parseDouble(split[1]), Double.parseDouble(split[0]));
+//            // 构建MarkerOption，用于在地图上添加Marker
+//            MarkerOptions options = new MarkerOptions().position(point)
+//                    .icon(bitmap);
+//            // 在地图上添加Marker，并显示
+//            Marker marker = (Marker) mBaiduMap.addOverlay(options);
+//            if (marker != null){
+//                Bundle bundle = new Bundle();
+//                bundle.putSerializable("bean", d);
+//                marker.setExtraInfo(bundle);
+//            }
+//        }
     }
 }

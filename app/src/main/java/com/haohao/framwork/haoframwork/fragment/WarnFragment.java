@@ -1,13 +1,22 @@
 package com.haohao.framwork.haoframwork.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
+
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.haohao.framwork.haoframwork.R;
+import com.haohao.framwork.haoframwork.activity.EnvironmentActivity;
 import com.haohao.framwork.haoframwork.adapter.LightAdapter;
 import com.haohao.framwork.haoframwork.framwork.BaseFragment;
 import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
@@ -21,12 +30,6 @@ import org.raphets.roundimageview.RoundImageView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.viewpager.widget.ViewPager;
 
 
 /**
@@ -75,7 +78,7 @@ public class WarnFragment extends BaseFragment implements ExpressView {
     /**
      * 网络请求
      */
-    private void request(){
+    private void request() {
         mPresenter.getList();
     }
 
@@ -105,9 +108,20 @@ public class WarnFragment extends BaseFragment implements ExpressView {
 
     @Override
     public void updateView(MainListBean bean) {
-        if (bean == null || bean.getMap() == null|| bean.getMap().getList() == null)
+        if (bean == null || bean.getMap() == null || bean.getMap().getList() == null)
             return;
-        LightAdapter adapter = new LightAdapter(R.layout.item_share,bean.getMap().getList());
+        LightAdapter adapter = new LightAdapter(R.layout.item_share, bean.getMap().getList());
+        adapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter1, View view, int position) {
+                if (view.getId() == R.id.btn) {
+                    MainListBean.MapBean.ListBean listBean = adapter.getData().get(position);
+                    int dev_id = listBean.getDev_id();
+                    startActivity(new Intent(getContext(), EnvironmentActivity.class)
+                            .putExtra("id", dev_id));
+                }
+            }
+        });
         rv.setAdapter(adapter);
     }
 

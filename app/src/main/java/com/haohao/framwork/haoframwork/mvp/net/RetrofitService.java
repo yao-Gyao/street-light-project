@@ -1,6 +1,7 @@
 package com.haohao.framwork.haoframwork.mvp.net;
 
 
+import com.haohao.framwork.haoframwork.mvp.bean.EnvBean;
 import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
 
 import java.util.Map;
@@ -44,5 +45,8 @@ public interface RetrofitService {
      */
     @GET(Constant.UrlOrigin.get_list)
     Observable<MainListBean> getList();
+
+    @GET(Constant.UrlOrigin.get_env)
+    Observable<EnvBean> getEnvList(@QueryMap Map<String,Object> map);
 
 }
