@@ -3,12 +3,18 @@ package com.haohao.framwork.haoframwork.mvp.net;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.haohao.framwork.haoframwork.application.BaseApplication;
 import com.haohao.framwork.haoframwork.mvp.bean.BaseBean;
 import com.haohao.framwork.haoframwork.utils.EncodeUtils;
 import com.haohao.framwork.haoframwork.utils.HttpInterceptorUtil;
 import com.haohao.framwork.haoframwork.utils.StringUtil;
 
+import java.io.IOException;
+
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
@@ -79,6 +85,17 @@ public class RetrofitUtils {
         loggingInterceptor.setLevel(level);
         // 定制OkHttp
         OkHttpClient.Builder httpClientBuilder = new OkHttpClient.Builder();
+        httpClientBuilder.addInterceptor(new Interceptor() {
+            @Override
+            public Response intercept(Interceptor.Chain chain) throws IOException {
+
+                Request request = chain.request().newBuilder()
+                        .addHeader("token", BaseApplication.getInstance().getToken())
+                        .build();
+                // 开始请求
+                return chain.proceed(request);
+            }
+        });
         // OkHttp进行添加拦截器loggingInterceptor
         httpClientBuilder.addInterceptor(loggingInterceptor);
         return httpClientBuilder.build();

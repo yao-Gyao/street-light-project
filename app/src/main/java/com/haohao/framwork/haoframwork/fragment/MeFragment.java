@@ -17,12 +17,11 @@ import com.haohao.framwork.haoframwork.framwork.BaseFragment;
 import com.zhouwei.mzbanner.MZBannerView;
 import com.zhouwei.mzbanner.holder.MZHolderCreator;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.viewpager.widget.ViewPager;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 
 /**
@@ -75,7 +74,7 @@ public class MeFragment extends BaseFragment {
         fl_update_pwd = view.findViewById(R.id.fl_update_pwd);
         btn_out = view.findViewById(R.id.btn_out);
 
-        tv_me_name.setText(BaseApplication.mUser.getName());
+        tv_me_name.setText(BaseApplication.mUser.getUser_name());
         banner = view.findViewById(R.id.banner);
         initBanner();
 

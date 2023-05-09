@@ -8,7 +8,7 @@ import com.baidu.location.LocationClient;
 import com.baidu.mapapi.CoordType;
 import com.baidu.mapapi.SDKInitializer;
 import com.blankj.utilcode.util.Utils;
-import com.haohao.framwork.haoframwork.database.UserBean;
+import com.haohao.framwork.haoframwork.mvp.bean.LoginBean;
 
 import java.util.ArrayList;
 
@@ -23,7 +23,8 @@ import androidx.multidex.MultiDex;
 public class BaseApplication extends Application {
     private static ArrayList<Activity> activityStack;
     private static BaseApplication mAppUtil;
-    public static UserBean mUser;
+    public static LoginBean.MapBean.UserInfoBean mUser;
+    private String token="";
 
     /**
      * 单例
@@ -47,6 +48,14 @@ public class BaseApplication extends Application {
         //包括BD09LL和GCJ02两种坐标，默认是BD09LL坐标。
         SDKInitializer.setCoordType(CoordType.BD09LL);
         LocationClient.setAgreePrivacy(true);
+    }
+
+    public void setToken(String token){
+        this.token = token;
+    }
+
+    public String getToken(){
+        return token;
     }
 
     /**

@@ -1,6 +1,7 @@
 package com.haohao.framwork.haoframwork.mvp.manager;
 
 import com.haohao.framwork.haoframwork.mvp.bean.EnvBean;
+import com.haohao.framwork.haoframwork.mvp.bean.LoginBean;
 import com.haohao.framwork.haoframwork.mvp.bean.MainListBean;
 import com.haohao.framwork.haoframwork.mvp.net.RetrofitHelper;
 import com.haohao.framwork.haoframwork.mvp.net.RetrofitService;
@@ -62,6 +63,10 @@ public class DataManager {
 
     public Observable<EnvBean> getEnvList(Map<String,Object> map) {
         return retrofitService.getEnvList(map);
+    }
+
+    public Observable<LoginBean> getLogin(Map<String,Object> map) {
+        return retrofitService.getLogin(map);
     }
 
 

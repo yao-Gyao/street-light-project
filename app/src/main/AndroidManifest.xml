@@ -61,7 +61,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".activity.ChatActivity"/>
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="P5CFnRyNob4oAxEE8ZMhowvPGzfthuCt" />

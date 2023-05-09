@@ -9,4 +9,8 @@
     <color name="f2_color">#f2f2f2</color>
     <color name="gray_ccc">#cccccc</color>
     <color name="gray_bbb">#bbbbbb</color>
+    <color name="gray_light_ff">#ff999999</color>
+    <color name="main_blue">#ff6dc4ce</color>
+    <color name="gray_dark_ff">#ff333333</color>
+
 </resources>
